@@ -3,8 +3,35 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+<audio src="~/audio/sw.mp3"></audio>
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<button class="button btn btn-light">Start</button>
+    <section class="star-wars">
+  <div class="crawl">
+    
+    <div class="title">
+      <p>Episode I</p>
+      <h1>A New Hope</h1>
+    </div>
+    
+    <p>It is a period of the global pandemy amid the economic crisis. 
+      Rebel store up food, especially goats and cabbages from wolfs-invaders.</p>     
+    <p>During the stockpiling, Rebel spies managed to steal secret plans to Alexey Kartynnik's ultimate weapon, 
+      the BEARD, a powerful psychological weapon able to invade into a young fragile minds with any idea.</p>
+    <p>Pursued by the Nemchinsky’s sinister agents, Roman Trufanov and his team swiftly develop the new app 
+      that can save his people and restore freedom and wellbeing to the Earth…</p>
+
+  </div>
+
+</section>
 </div>
+<script>
+        document.querySelector('button').onclick = play;
+        function play(e) {
+        let audio = document.querySelector('audio');
+            audio.play();
+        let crawl = document.querySelector('.crawl');
+        crawl.style.animation = "crawl 60s linear";
+        document.querySelector('button').setAttribute('hidden', null);
+        }
+    </script>
